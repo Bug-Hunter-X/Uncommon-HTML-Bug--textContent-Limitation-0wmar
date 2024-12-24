@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+  <script>
+    // Incorrectly accessing the text content
+    let text = document.getElementById('myDiv').textContent;
+    console.log(text); // This will only output the text content of the direct child elements
+    //This is wrong as it will only log "This is some text." and not include any other elements inside "myDiv"
+  </script>
+</body>
+</html>
